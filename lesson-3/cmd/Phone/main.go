@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	//template := `ДОБРО ПОЖАЛОВАТЬ, {username}! Ваш код доступа: {code}`
+
 	
 	flag.Parse()
 
