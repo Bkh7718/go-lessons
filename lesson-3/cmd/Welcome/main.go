@@ -14,13 +14,13 @@ func main() {
 	
 	flag.Parse()
 
-	username := flag.Arg(0)
-	code := flag.Arg(1)
+	username := flag.Arg(0) // Тут мы получаем ПЕРВЫЙ! аргумент из командной строки
+	code := flag.Arg(1) // Тут мы получаем ВТОРОЙ! аргумент из командной строки
 
-	message := strings.ReplaceAll(template, "{username}", username)
-	message = strings.ReplaceAll(message, "{code}", code)
+	message := strings.ReplaceAll(template, "{username}", username) // Заменяем {username} на значение переменной Которой присвоили первый аргумент
+	message = strings.ReplaceAll(message, "{code}", code) // Заменяем {code} на значение переменной Которой присвоили второй аргумент
 
 
-	fmt.Println(message)
+	fmt.Println(message) // Вуаля!
 
 }
