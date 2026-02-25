@@ -13,7 +13,6 @@ func main() {
 
 	amount := 666
 	welcomeBonus := 5 
-
 	bonus := amount / 5 + welcomeBonus
 	println(bonus)
 
