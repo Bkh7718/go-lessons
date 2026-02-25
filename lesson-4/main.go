@@ -1,24 +1,14 @@
 package main
 
 import (
-	"lesson-4/pkg/commission"
+	"lesson-4/pkg/billing"
 	"log"
 )
 
 func main() {
 	
-	result := commission.Calculate(9_999_999)
-	log.Print(result)
+	result := billing.Calculate10000(9999.0)
+	log.Print(result, " diram")
 
 }
 
-// Commented out old code:
-// wallet := 100.0
-// card := 3120.5
-// balance := caculateBalance(wallet, card)
-// log.Print(balance)
-//
-// func caculateBalance(wallet float64, card float64) (balance float64) {
-//	balance = wallet + card
-//	return balance
-// }
