@@ -7,7 +7,12 @@ import (
 )
 
 func main() {
-	card := card.IssueCard(types.USD,  "white", "John Snow")
-	fmt.Printf("Issued new card: %+v\n", card)
+	NewCard := card.IssueCard(types.USD,  "white", "John Snow")
+	fmt.Printf("Issued new card: %+v\n", NewCard)
+	// Attempt to withdraw from the card
+	updatedCard := card.Withdraw(NewCard, 1500)
+	fmt.Printf("Balance after withdrawal: %+v\n", updatedCard.Balance)
+	
+	
 }
 	
