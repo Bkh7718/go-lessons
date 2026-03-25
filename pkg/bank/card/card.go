@@ -4,6 +4,7 @@ import (
 	"go-lessons/pkg/bank/types"
 )
 
+// IssueCard creates and returns a new card with the specified currency, color, and name. The card is initialized with a default ID, PAN, zero balance, and active status.
 func IssueCard(currency types.Currency, color string, name string) types.Card {
 	card := types.Card{
 		ID:       1000,
@@ -18,6 +19,7 @@ func IssueCard(currency types.Currency, color string, name string) types.Card {
 
 }
 
+// Withdraw deducts the specified amount from the card's balance if the card is active, has sufficient funds, and the amount does not exceed defined limits based on the currency.
 func Withdraw(card *types.Card, amount types.Money) {
 	if card.Active == false {
 		return
@@ -38,6 +40,7 @@ func Withdraw(card *types.Card, amount types.Money) {
 
 }
 
+// Deposit adds the specified amount to the card's balance if the card is active and the amount does not exceed the defined limit.
 func Deposit(card *types.Card, amount types.Money) {
 	if card.Active == false {
 		return
@@ -49,6 +52,7 @@ func Deposit(card *types.Card, amount types.Money) {
 	card.Balance += amount
 }
 
+// AddBonus calculates and adds a bonus to the card's balance based on the provided percentage and time factors.
 func AddBonus(card *types.Card, percent int, daysInMonth int, daysInYear int) {
 
 	if card.Active == false {
