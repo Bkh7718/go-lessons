@@ -85,3 +85,29 @@ func ExampleAddBonus_limit() {
 	fmt.Println(card.Balance)
 	// Output: 10005000
 }
+
+func ExampleTotal() {
+	cards := []types.Card{
+		{
+			Balance: 1000,
+			Active:  true,
+		},
+		{
+			Balance: 2000,
+			Active:  true,
+		},
+		{
+			Balance: 3000,
+			Active:  true,
+		},
+		{
+			Balance: 4000,
+			Active:  false, // This card should not be included in the total because it's inactive
+		},
+
+	}
+	result := Total(cards)
+	fmt.Println(result)
+	// Output: 6000
+}
+

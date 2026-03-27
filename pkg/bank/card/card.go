@@ -73,3 +73,16 @@ func AddBonus(card *types.Card, percent int, daysInMonth int, daysInYear int) {
 	card.Balance += bonus
 
 }
+
+func Total(cards []types.Card) types.Money {
+
+	sum := int64(0)
+	for _, card := range cards {
+		if card.Active && card.Balance > 0 {
+			sum += int64(card.Balance)
+		}
+
+	}
+
+	return types.Money(sum)
+}
