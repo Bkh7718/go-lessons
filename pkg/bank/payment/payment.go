@@ -20,3 +20,5 @@ func Max(payments []types.Payment) types.Payment {
 	payments[0] = max //return max
 	return payments[0]
 }
+
+
